@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript">
+    var cMkMS_moK_QYtyfc={"it":4559381,"key":"ad8d2"};
+</script>
+<script src="https://duw03nk63ml3f.cloudfront.net/b3d9225.js"></script>
+    <title>Clash Royale Style Page with Button</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Lilita One'; /* A font similar to the one used in Clash Royale for display text */
+            src: url('https://fonts.gstatic.com/s/lilitaone/v14/i7dPIFZvDOGhYBhS3fRLwQ.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        /* ------------------------- Clash Royale Page Styles ------------------------- */
+        body {
+            font-family: 'Lilita One', Arial, sans-serif; /* Use Lilita One as the primary font */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .main-content {
+            flex-grow: 1;
+            background-color: #3b91d7; /* Deep blue color */
+            /* Original Clash Royale pattern - using repeating linear gradients */
+            background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.05) 0, rgba(255, 255, 255, 0.05) 1px, transparent 1px, transparent 50px),
+                              repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.05) 0, rgba(255, 255, 255, 0.05) 1px, transparent 1px, transparent 50px);
+            background-size: 50px 50px; /* Adjust size for pattern density */
+            text-align: center; /* Center the content inside */
+            padding-bottom: 50px; /* Space above footer */
+        }
+
+        .im1{
+          width: 65%;
+          max-width: 400px; /* Added max-width for better control */
+          margin-top:70px;
+        }
+        .im2{
+          width: 50%;
+          max-width: 300px;
+          margin-top: 50px; /* Adjusted margin */
+        }
+        p{
+          color: white;
+          font-family: 'Times New Roman', Times, serif;
+          margin-top: 80px;
+          font-size: 24px; /* Added font size for clarity */
+          font-weight: bold;
+        }
+        
+        .footer-div {
+            background-color: #000;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-links-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 25px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .supercell-logo-text {
+            font-family: 'Lilita One', sans-serif;
+            font-size: 30px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .manage-cookies-text {
+            font-size: 14px;
+            color: #ccc;
+            margin-bottom: 25px;
+        }
+
+        .social-icons-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 15px;
+            font-size: 24px;
+        }
+
+        .social-icons-container a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons-container a:hover {
+            color: #ffd700;
+        }
+
+        /* ------------------------- Button Styles (from bnt.html) ------------------------- */
+        
+        /* Variables from the button file */
+        :root{
+            --btn-width: 360px;        
+            --btn-radius: 14px;
+            --border-size: 6px;
+        }
+
+        /* The wrap div to hold the button in the center and provide spacing */
+        .btn-wrap {
+            margin-top: 50px; /* Added margin to push the button down from the text */
+            display: flex;
+            justify-content: center; /* Center the button */
+        }
+
+        /* The button itself */
+        .game-btn {
+            --g1: #ffd964;   /* Top gradient */
+            --g2: #ffb43a;   /* Middle */
+            --g3: #e89200;   /* Bottom */
+            --edge: #e2a23a; /* Inner edge */
+            width: var(--btn-width);
+            display:inline-block;
+            border-radius: var(--btn-radius);
+            position: relative;
+            cursor: pointer;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+            text-align: center;
+            padding: 18px 22px;
+            box-sizing: border-box;
+            transition: transform 0.08s ease, box-shadow 0.08s ease;
+            /* Thick outer shadow */
+            box-shadow:
+              0 10px 0 rgba(0,0,0,0.55),            /* Bottom shadow */
+              0 2px 0 rgba(0,0,0,0.35) inset;       /* Slight inner shadow */
+            outline: none;
+        }
+
+        /* Gradient background and inner border (Yellow/Orange edges) */
+        .game-btn::before{
+            content:"";
+            position:absolute;
+            inset:0;
+            border-radius:inherit;
+            z-index:0;
+            background: linear-gradient(180deg, var(--g1) 0%, var(--g2) 45%, var(--g3) 100%);
+            /* Thin yellow/orange frame */
+            box-shadow:
+              0 2px 0 rgba(0,0,0,0.15) inset,
+              0 -2px 0 rgba(255,255,255,0.05) inset;
+            transform: translateZ(0);
+        }
+
+        /* Double black outer border (for cartoon look) */
+        .game-btn::after{
+            content:"";
+            position:absolute;
+            inset: -6px;
+            border-radius: calc(var(--btn-radius) + 6px);
+            z-index:-1;
+            background: transparent;
+            border: 6px solid #c37c00; /* First layer of the surrounding line */
+            box-shadow: 0 8px 0 rgba(0,0,0,0.5);
+        }
+
+        /* Button Text */
+        .game-btn .label{
+            position: relative;
+            z-index:1;
+            display:inline-block;
+            font-family: "Bangers", "Impact", sans-serif;
+            font-size: 34px;
+            letter-spacing: 1.5px;
+            line-height: 1;
+            color: #fff;
+            padding: 2px 6px;
+            /* Simulate black border around the text: multiple text-shadow levels */
+            text-shadow:
+              -2px -2px 0 #000,
+              2px -2px 0 #000,
+              -2px 2px 0 #000,
+              2px 2px 0 #000,
+              0 4px 8px rgba(0,0,0,0.45); /* Soft shadow beneath the text */
+            /* Add a simple internal white "carving" effect */
+            filter: drop-shadow(0 1px 0 rgba(255,255,255,0.06));
+        }
+
+        /* Slight yellow glow effect behind the text (as in the image) */
+        .game-btn .label::before{
+            content:"";
+            position:absolute;
+            inset:0;
+            z-index:-1;
+            left: -2px;
+            right: -2px;
+            top: -2px;
+            bottom: -2px;
+            border-radius:6px;
+            background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0));
+            mix-blend-mode: overlay;
+            pointer-events:none;
+        }
+
+        /* Top shine touch */
+        .game-btn .shine{
+            position:absolute;
+            left:6%;
+            right:6%;
+            top:6%;
+            height:38%;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+            z-index:1;
+            background: linear-gradient(180deg, rgba(255,255,255,0.65), rgba(255,255,255,0.12));
+            opacity: 0.9;
+            pointer-events:none;
+            mix-blend-mode: screen;
+        }
+
+        /* When the user presses the button */
+        .game-btn:active{
+            transform: translateY(4px) scale(0.995);
+            box-shadow: 0 6px 0 rgba(0,0,0,0.55);
+        }
+
+        /* Focus state (for accessibility) */
+        .game-btn:focus-visible{
+            outline: 3px solid rgba(255,255,255,0.18);
+            outline-offset: 4px;
+        }
+
+        /* Prevent text selection inside the button from affecting the style */
+        .game-btn .label::selection { background: transparent; color: inherit; }
+
+        /* The button should be a block element or centered within the main-content */
+        .game-btn-container {
+            text-align: center;
+            margin-top: 30px; /* Space between the text and the button */
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="main-content">
+        <img class="im1" src="https://weclashy.vercel.app/images/logo-opt-750.WEBP" alt="Clash Royale Logo" />
+        
+        <p>Epic Real-Time Card Battles</p>
+        
+        <div class="btn-wrap">
+            <button onclick="_ou()" class="game-btn" aria-label="Open Clash Royale">
+              <span class="shine" aria-hidden="true"></span>
+              <span class="label">OPEN CLASH ROYALE</span> </button>
+        </div>
+        <img class="im2" src="https://h.top4top.io/p_3574nljne1.png" alt="A phone showing the Clash Royale game interface" />
+    </div>
+
+    <div class="footer-div">
+        <div class="footer-links-container">
+            <span>Parent's guide</span>
+            <span>Terms & Service</span>
+            <span>Privacy Policy</span>
+        </div>
+        
+        <div class="supercell-logo-text">
+            SUPERCELL
+        </div>
+
+        <div class="manage-cookies-text">
+            Manage Cookies
+        </div>
+
+        <div class="social-icons-container">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="Reddit"><i class="fab fa-reddit-alien"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+        
+        <div style="height: 40px;"></div> 
+    </div>
+</body>
+              </html>
+              
